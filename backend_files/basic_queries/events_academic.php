@@ -12,7 +12,11 @@ if(mysqli_connect_error()){
 }
 
 $return_arr = array();
-$sql = "SELECT * FROM event, academic_event WHERE event.id = academic_event.id ORDER by date ASC";
+$sql = "SELECT * 
+	FROM event, academic_event 
+	WHERE event.id = academic_event.id 
+	ORDER by date ASC";
+	
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
