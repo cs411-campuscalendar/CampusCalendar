@@ -18,7 +18,12 @@ if ($_GET) {
 	die("Enter proper parameters");
 }
 
-$sql = "SELECT * FROM event WHERE name LIKE '%$keywords%' OR description LIKE '%$keywords%' OR date LIKE '%$keywords%' OR location LIKE '%$keywords%'";
+$sql = "SELECT * 
+	FROM event 
+	WHERE name LIKE '%$keywords%' 
+	OR description LIKE '%$keywords%' 
+	OR date LIKE '%$keywords%' 
+	OR location LIKE '%$keywords%'";
 
 $result = $conn->query($sql);
 $return_arr = array();
